@@ -1,0 +1,35 @@
+/* .header{
+    position:absolute;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+} */
+
+
+.navbar{
+    position: absolute;
+    background-color: rgba(219, 0, 0, 0);
+}
+
+
+.nav-link{
+    color: white;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.logo{
+    height: 70px;
+}
+
+.navbar-toggler{
+    background-color: antiquewhite;
+}
