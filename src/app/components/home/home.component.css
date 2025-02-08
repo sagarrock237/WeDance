@@ -9,10 +9,11 @@
 }
 
 .mainImage {
-    background: url('/aboutus.JPG');
+    background: url('https://images.unsplash.com/photo-1486611289333-50d2b3ac99d1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     height: 100vh;
     background-size: cover;
     background-position: center;
+    box-shadow: 3px 3px 7px 7px black;
     background-repeat: no-repeat;
 
 }
@@ -70,7 +71,42 @@
 }
 
 
+/* gallery */
 
+.gallery{
+    /* overflow-x: scroll; */
+    /* justify-content: space-between; */
+    /* animation: scroll 15s linear infinite; */
+    animation: scroll 15s linear infinite;
+}
+
+.gallery img{
+    height: 180px;
+    border-radius: 20px;
+}
+
+.galleryMain::-webkit-scrollbar {
+    display: none;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* Scroll to the left by 100% of the content width */
+}
+
+/* Biography */
+.biography img{
+    height: 250px;
+    /* width: 300px; */
+}
 
 
 
