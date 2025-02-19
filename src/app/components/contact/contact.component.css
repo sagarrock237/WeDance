@@ -1,0 +1,22 @@
+.main{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg,  #fceb8e, #f5e9a8, #f7efaf, #fceb8e);
+}
+
+.contactForm{
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 30px;
+}
+
+.form-control{
+    box-shadow: 2px 2px 4px #fceb8e;
+}
+
+.contactFormHeading{
+    background: linear-gradient(90deg,  rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),#f7efaf, #f7efaf, #f7efaf, #f7efaf, #f7efaf,#fceb8e, #fceb8e, #fceb8e);
+
+    /* border: 2px solid rgb(214, 0, 0); */
+    /* box-shadow: 0px 0px 4px black; */
+    border-radius: 30px;
+}

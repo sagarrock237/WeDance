@@ -1,25 +1,27 @@
 .main {
-    background: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://img.freepik.com/premium-photo/abstract-gold-bokeh-with-black-background_34836-3152.jpg?w=740');
     height: 100vh;
     width: 100%;
+
     background-position: bottom;
     background-size: cover;
     position: fixed;
+    top:0px;
     z-index: -1;
 }
 
 .mainImage {
-    background: url('https://images.unsplash.com/photo-1486611289333-50d2b3ac99d1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://img.freepik.com/free-vector/shiny-wave-background-concept_23-2148390174.jpg?t=st=1739105913~exp=1739109513~hmac=270618d966f1ba042f557fb245b8ed32fdc46dafab7eddae92dca76aa356238c&w=740');
     height: 100vh;
     background-size: cover;
     background-position: center;
-    box-shadow: 3px 3px 7px 7px black;
+    box-shadow: 0px 0px 7px 7px rgb(29, 28, 28);
     background-repeat: no-repeat;
 
 }
 
 .mainImage-in {
-    background-color: rgba(9, 1, 54, 0.575);
+    /* background-color: rgba(54, 51, 1, 0.342); */
     font-style: "serif";
     display: flex;
     justify-content: center;
@@ -38,6 +40,7 @@
 
 
 /* ABout US */
+
 
 .aboutUsImg {
     display: flex;
@@ -64,7 +67,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 30px;
-    box-shadow: 6px 6px 6px black;
+    box-shadow: 0px 0px 6px black;
     font-size: 20px;
     font-weight: 500;
 
@@ -104,12 +107,37 @@
 
 /* Biography */
 .biography img{
-    height: 250px;
+    height: 220px;
     /* width: 300px; */
 }
 
 
+/* video */
+.video{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.video img{
+    filter: invert();
+    height: 100px;
+    cursor: pointer;
+}
+
+.videoPlay{
+    height: 100vh;
+    width: 100%;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.603);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
@@ -153,5 +181,10 @@
     }
 
 
+    /* Biography */
+.biography img{
+    height: 130px;
+    /* width: 300px; */
+}
 
 }

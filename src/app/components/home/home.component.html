@@ -1,12 +1,23 @@
 <div class="main"></div>
 
+@if(video){
+<div class="videoPlay">
+  <svg style="cursor: pointer;" (click)="playVideo('close')" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x-circle-fill text-danger my-4"
+    viewBox="0 0 16 16">
+    <path
+      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+  </svg>
+  <youtube-player [videoId]="'56uy6LoPwjU'" [width]="640" [height]="360"></youtube-player>
+</div>
+}
+
 <div class="container-fluid">
   <div class="row mainImage">
-    <div class="mainImage-in">
-      <div class="col-lg-6 col-md-8 col-11">
+    <div class="mainImage-in p-0">
+      <div class="col-lg-12 col-md-12 col-12 w-100 py-2" style="background-color: rgba(0, 0, 0, 0.582); border-radius: 20px;">
         <h1 class="text-center">Learn a step which identify you</h1>
         <h2 class="text-center">We are here for you</h2>
-        <div class="text-center"><button class="btn btn-success">Explore Now</button></div>
+        <div class="text-center"><button class="btn btn-success explorebtn">Explore Now</button></div>
       </div>
     </div>
   </div>
@@ -50,7 +61,7 @@
   <!-- About Us -->
 
 
-  <div class="row aboutUs mt-5 bg-dark py-5" style="box-shadow: 3px 3px 7px 7px black;">
+  <div class="row aboutUs mt-5 bg-dark py-5" style="box-shadow: 0px 0px 7px 7px black;">
     <div class="col-lg-6 col-md-6 col-12 aboutUsImg">
       <img src="/aboutus.JPG">
     </div>
@@ -70,7 +81,7 @@
 
   <!-- OUR GALLERY -->
 
-  <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.692);">
+  <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);">
     <h1 class="text-center text-white">Our Gallery</h1>
     <div class="galleryMain" style="overflow-x: scroll;">
       <div class="col-12 gallery my-0 py-5 d-flex">
@@ -123,21 +134,42 @@
 
 
   <!-- BIOGRAHY -->
-   <div class="row biography bg-dark py-3" style="box-shadow: 3px 3px 7px 7px black;">
+  <div class="row biography bg-dark py-3" style="box-shadow: 0px 0px 7px 7px black;">
     <h1 class="text-center text-white">Biography</h1>
     <div class="col-lg-6 col-md-6 col-12 aboutUsImg my-4">
-      <img class="mx-auto" src="/logo.png">
+      <img style="" class="mx-auto" src="/logo.png">
     </div>
     <div class="col-lg-6 col-md-6 col-12 my-4">
       <div class="text-white mx-auto" style="text-align: justify;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates est modi consequuntur, nemo, nihil asperiores quas officiis labore atque corrupti voluptatem cumque iure dolorum maxime? Eaque, aspernatur provident cumque sequi quasi, dolorem vel molestias distinctio assumenda sunt, fuga repellendus laborum inventore neque. Ullam cum quaerat distinctio aspernatur eaque id cupiditate ex necessitatibus possimus nemo, aliquid explicabo incidunt iusto nisi est blanditiis delectus error temporibus odit facere itaque sequi voluptatem quis a. Deleniti expedita repudiandae architecto! Tempore minus recusandae nemo unde sapiente nam nulla omnis, quisquam non voluptas quasi officiis ab culpa autem velit delectus fuga architecto nesciunt ipsa vitae necessitatibus quo pariatur assumenda. Repellat consectetur voluptatum adipisci optio in. Omnis quis quia tenetur saepe vitae. Mollitia fugit, maxime vitae cum nihil.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates est modi consequuntur, nemo, nihil
+        asperiores quas officiis labore atque corrupti voluptatem cumque iure dolorum maxime? Eaque, aspernatur
+        provident cumque sequi quasi, dolorem vel molestias distinctio assumenda sunt, fuga repellendus laborum
+        inventore neque. Ullam cum quaerat distinctio aspernatur eaque id cupiditate ex necessitatibus possimus nemo,
+        aliquid explicabo incidunt iusto nisi est blanditiis delectus error temporibus odit facere itaque sequi
+        voluptatem quis a. Deleniti expedita repudiandae architecto! Tempore minus recusandae nemo unde sapiente nam
+        nulla omnis, quisquam non voluptas quasi officiis ab culpa autem velit delectus fuga architecto nesciunt ipsa
+        vitae necessitatibus quo pariatur assumenda. Repellat consectetur voluptatum adipisci optio in. Omnis quis quia
+        tenetur saepe vitae. Mollitia fugit, maxime vitae cum nihil.
       </div>
     </div>
-   </div>
+  </div>
+
+
+  <!-- Video -->
+  <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);; box-shadow: 2px 2px 7px black; ;">
+    <!-- <h1 class="text-center text-white">Take a look on our Events</h1> -->
+    <h1 class="text-center text-white">Take a look on our Events</h1>
+    <div class="video">
+      <img (click)="playVideo('open')"
+        src="https://community.adobe.com/t5/image/serverpage/image-id/45229i4C951E379A470D7E/image-size/large?v=v2&px=999">
+      <span class="text-white">Play</span>
+    </div>
+  </div>
 
 
 
-  <div style="height: 100vh;"></div>
+
+
 
 
 </div>

@@ -1,35 +1,21 @@
-/* .header{
-    position:absolute;
+.navbar {
+    /* position: absolute; */
+    background-color: black;
+    margin:0px
 }
 
-.menu{
-    display: flex;
-    justify-content: space-between;
-}
 
-.menu-item{
+.nav-link {
     color: white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-} */
-
-
-.navbar{
-    position: absolute;
-    background-color: rgba(219, 0, 0, 0);
-}
-
-
-.nav-link{
-    color: white;
-    font-size: 17px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-.logo{
+.logo {
     height: 70px;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     background-color: antiquewhite;
 }

@@ -1,0 +1,157 @@
+@if(image){
+<div class="container-fluid bg-black mt-0 py-3">
+
+    <div class="row">
+        <div class="menu col-lg-4 col-md-6 col-10 mx-auto">
+            <div><button class="btn py-0"
+                    style="cursor: pointer; background-color: #fceb8e; font-size: 25px; font-weight: 600;"><span
+                        class="">Images</span></button></div>
+            <div (click)="shift('video')"><span style="color:white; cursor: pointer;
+                    font-size: 25px;
+                    font-weight: 600;">Videos</span></div>
+        </div>
+
+    </div>
+    <div class="row my-3 mx-0">
+
+        <div class="col-4 mx-0 px-2">
+
+            <img class="my-2 galleryItem" src="/gallery/1.JPG">
+
+            <img class="my-2 galleryItem" src="/gallery/2.JPG">
+
+            <img class="my-2 galleryItem" src="/gallery/3.JPG">
+
+            <img class="my-2 galleryItem" src="/gallery/9.PNG">
+            <img class="my-2 galleryItem" src="/gallery/10.JPG">
+            <img class="my-2 galleryItem" src="/gallery/11.JPG">
+        </div>
+
+        <div class="col-4 mx-0 px-2">
+            <img class="my-2 galleryItem" src="/gallery/12.JPG">
+
+            <img class="my-2 galleryItem" src="/gallery/4.JPG">
+
+
+            <img class="my-2 galleryItem" src="/gallery/5.JPG">
+
+            <img class="my-2 galleryItem" src="/gallery/6.PNG">
+
+
+            <img class="my-2 galleryItem" src="/gallery/13.JPG">
+            <img class="my-2 galleryItem" src="/gallery/14.AVIF">
+
+        </div>
+
+
+        <div class="col-4 mx-0 px-2">
+            <img class="my-2 galleryItem" src="/gallery/15.JPG">
+            <img class="my-2 galleryItem" src="/gallery/7.PNG">
+
+            <img class="my-2 galleryItem" src="/gallery/8.PNG">
+
+
+            <img class="my-2 galleryItem" src="/gallery/16.JPG">
+            <img class="my-2 galleryItem" src="/gallery/17.JPG">
+            <img class="my-2 galleryItem" src="/gallery/18.JPG">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+}
+
+
+
+
+@if(!image){
+<div class="container-fluid bg-black mt-0 py-3">
+
+    <div class="row">
+        <div class="menu col-lg-4 col-md-6 col-10 mx-auto">
+            <div (click)="shift('image')"><span style="color:white; cursor: pointer;
+                    font-size: 25px;
+                    font-weight: 600;">Images</span></div>
+
+
+            <div><button class="btn py-0"
+                    style="cursor: pointer; background-color: #fceb8e; font-size: 25px; font-weight: 600;"><span
+                        class="">Videos</span></button></div>
+        </div>
+
+    </div>
+
+
+    <div class="row my-3">
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'56uy6LoPwjU'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'E2ni1YgJiEM'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'lrrZgSOtNas'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'MMtopBi2uYw'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'kIDp0o1s7C8'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'K3xM4UikrxI'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'56uy6LoPwjU'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'E2ni1YgJiEM'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'lrrZgSOtNas'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'MMtopBi2uYw'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 videos my-2">
+            <youtube-player class="mx-auto videoYoutube" [videoId]="'kIDp0o1s7C8'" [width]="370"
+                [height]="200"></youtube-player>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+}

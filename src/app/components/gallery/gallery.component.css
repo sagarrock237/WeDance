@@ -1,0 +1,25 @@
+.galleryItem{
+    width: 100%;
+    /* height: 30%; */
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu span{
+
+    /* background-color: aliceblue; */
+}
+
+
+.videos{
+    display: flex;
+    justify-content: center;
+}
+
+.videoYoutube{
+    border-radius: 20px;
+}

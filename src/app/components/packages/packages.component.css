@@ -1,0 +1,8 @@
+.main {
+    background: linear-gradient(90deg, #fceb8e, #f5e9a8, #f7efaf, #fceb8e);
+    width: 100%;
+}
+
+span {
+    font-family: "Times new roman condensed";
+}

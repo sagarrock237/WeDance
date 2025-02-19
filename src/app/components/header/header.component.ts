@@ -1,12 +1,101 @@
-import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
+  constructor(private route: Router) {
+    setTimeout(() => {
+      if (this.route.url == '/') {
+        this.home = true;
+        this.gallery = false;
+        this.packages = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/packages') {
+        this.packages = true;
+        this.home = false;
+        this.gallery = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/gallery') {
+        this.gallery = true;
+        this.home = false;
+        this.packages = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/services') {
+        this.services = true;
+        this.home = false;
+        this.gallery = false;
+        this.packages = false;
+        this.contact = false;
+      } else if (this.route.url == '/contact') {
+        this.contact = true;
+        this.home = false;
+        this.gallery = false;
+        this.packages = false;
+        this.services = false;
+      }
+    }, 50)
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  routee(loca: any) {
+    this.route.navigateByUrl(loca);
+    setTimeout(() => {
+      if (this.route.url == '/') {
+        this.home = true;
+        this.gallery = false;
+        this.packages = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/packages') {
+        this.packages = true;
+        this.home = false;
+        this.gallery = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/gallery') {
+        this.gallery = true;
+        this.home = false;
+        this.packages = false;
+        this.services = false;
+        this.contact = false;
+      } else if (this.route.url == '/services') {
+        this.services = true;
+        this.home = false;
+        this.gallery = false;
+        this.packages = false;
+        this.contact = false;
+      } else if (this.route.url == '/contact') {
+        this.contact = true;
+        this.home = false;
+        this.gallery = false;
+        this.packages = false;
+        this.services = false;
+      }
+    }, 50)
+  }
+
+  home = false;
+  gallery = false;
+  packages = false;
+  services = false;
+  contact = false;
+
+
 
 }
