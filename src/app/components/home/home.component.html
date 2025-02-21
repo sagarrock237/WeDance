@@ -1,9 +1,73 @@
+@if(spinner){
+  <app-spinner></app-spinner>
+}
+
 <div class="main"></div>
 
+
+<!-- JOIN US FORM -->
+
+@if(form){
+<div class="joinUsForm">
+  <div class="myForm py-4 px-4">
+    <div>
+      <svg style="cursor: pointer;" (click)="letsConnect('cancel')" xmlns="http://www.w3.org/2000/svg" width="16"
+        height="16" fill="currentColor" class="bi bi-x-circle-fill text-danger" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+      </svg>
+      <h2 class="text-center mb-4">Lets Connect</h2>
+    </div>
+    <form [formGroup]="joinForm">
+      <div class="form-group my-4">
+        <label for="exampleInputEmail1"><span>Enter your name</span></label>
+        <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Enter Name">
+
+      </div>
+      <div class="form-group my-4">
+        <label for="exampleInputPassword1"><span>Enter your Email</span></label>
+        <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <div class="form-group my-4">
+        <label for="exampleInputPassword1"><span>Enter your Number</span></label>
+        <input type="number" formControlName="number" class="form-control" id="exampleInputPassword1"
+          placeholder="Number">
+      </div>
+
+      <!-- <button (click)="post()">dasd</button>  -->
+
+      <!-- <input type="file" (change)="handleUpload($event)">
+
+      <input type="file" (change)="onFileSelected($event)" class="form-control" />
+      <button (click)="downloadBase64()">sdh</button> -->
+
+      <button type="submit" class="btn btn-primary" (click)="saveData()">Submit</button>
+    </form>
+  </div>
+</div>
+}
+
+
+
+<!-- Filled POPUP -->
+@if(openFilled){
+
+<div class="filled" (click)="toggleFilled()">
+  <div class="filled-in">
+    <img src="https://emojiisland.com/cdn/shop/products/4_large.png?v=1571606116">
+    <h1 style="color:rgb(95, 86, 86),; font-weight: 500;">We will contact you soon.</h1>
+  </div>
+</div>
+}
+
+<!-- YOUTUBE VIDEO -->
 @if(video){
 <div class="videoPlay">
-  <svg style="cursor: pointer;" (click)="playVideo('close')" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x-circle-fill text-danger my-4"
-    viewBox="0 0 16 16">
+  <svg style="cursor: pointer;" (click)="playVideo('close')" xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+    fill="currentColor" class="bi bi-x-circle-fill text-danger my-4" viewBox="0 0 16 16">
     <path
       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
   </svg>
@@ -14,10 +78,11 @@
 <div class="container-fluid">
   <div class="row mainImage">
     <div class="mainImage-in p-0">
-      <div class="col-lg-12 col-md-12 col-12 w-100 py-2" style="background-color: rgba(0, 0, 0, 0.582); border-radius: 20px;">
-        <h1 class="text-center">Learn a step which identify you</h1>
-        <h2 class="text-center">We are here for you</h2>
-        <div class="text-center"><button class="btn btn-success explorebtn">Explore Now</button></div>
+      <div class="col-lg-12 col-md-12 col-12 w-100 py-2"
+        style="background-color: rgba(0, 0, 0, 0.582); border-radius: 20px;">
+        <h1 class="text-center">Celebrate Your Special Moments with Dance</h1>
+        <h2 class="text-center">Grace, Energy, and Joy in Every Step! </h2>
+        <div class="text-center"><button class="btn btn-success explorebtn" (click)="letsConnect('open')">Join Now</button></div>
       </div>
     </div>
   </div>
@@ -25,14 +90,14 @@
 
   <!-- Services -->
   <div class="row mt-5">
-    <div class="col-lg-3 col-md-6 col-12 my-2">
+    <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
       <div class="mx-5 bg-white serviceItem pt-3">
         <img style="height: 180px;" src="https://cdn-icons-png.flaticon.com/512/40/40203.png">
         <span class="my-2">⁠Couple Dance</span>
       </div>
     </div>
 
-    <div class="col-lg-3 col-md-6 col-12 my-2">
+    <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
       <div class="mx-5 bg-white serviceItem pt-3">
         <img style="height: 180px;" src="https://cdn0.iconfinder.com/data/icons/party-human-1/66/29-512.png">
         <span class="my-2">Group Dance</span>
@@ -40,7 +105,7 @@
     </div>
 
 
-    <div class="col-lg-3 col-md-6 col-12 my-2">
+    <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
       <div class="mx-5 bg-white serviceItem pt-3">
         <img style="height: 180px;"
           src="https://images.vexels.com/media/users/3/236440/isolated/preview/5cff4483ed2d0027d2512e2b29c227c3-girl-in-long-dress-silhouette.png">
@@ -49,7 +114,7 @@
     </div>
 
 
-    <div class="col-lg-3 col-md-6 col-12 my-2">
+    <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
       <div class="mx-5 bg-white serviceItem pt-3">
         <img style="height: 180px;" src="https://logolook.net/wp-content/uploads/2023/12/Michael-Jackson-logo.png">
         <span class="my-2">⁠Couple Dance</span>
@@ -61,7 +126,7 @@
   <!-- About Us -->
 
 
-  <div class="row aboutUs mt-5 bg-dark py-5" style="box-shadow: 0px 0px 7px 7px black;">
+  <div class="row aboutUs mt-5 bg-dark py-5 reveal" style="box-shadow: 0px 0px 7px 7px black;">
     <div class="col-lg-6 col-md-6 col-12 aboutUsImg">
       <img src="/aboutus.JPG">
     </div>
@@ -81,52 +146,52 @@
 
   <!-- OUR GALLERY -->
 
-  <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);">
+  <div class="row py-4 reveal" style="background-color: rgba(0, 0, 0, 0.274);">
     <h1 class="text-center text-white">Our Gallery</h1>
     <div class="galleryMain" style="overflow-x: scroll;">
       <div class="col-12 gallery my-0 py-5 d-flex">
 
 
-        <img src="/gallery/1.JPG" class="img-fluid mx-3">
+        <img src="/1.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/2.JPG" class="img-fluid mx-3">
+        <img src="/2.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/3.JPG" class="img-fluid mx-3">
-
-
-        <img src="/gallery/4.JPG" class="img-fluid mx-3">
-
-        <img src="/gallery/5.JPG" class="img-fluid mx-3">
-
-        <img src="/gallery/6.PNG" class="img-fluid mx-3">
+        <img src="/3.JPG" class="img-fluid mx-3">
 
 
+        <img src="/4.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/7.PNG" class="img-fluid mx-3">
+        <img src="/5.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/8.PNG" class="img-fluid mx-3">
-
-        <img src="/gallery/9.PNG" class="img-fluid mx-3">
+        <img src="/6.PNG" class="img-fluid mx-3">
 
 
 
+        <img src="/7.PNG" class="img-fluid mx-3">
 
-        <img src="/gallery/10.JPG" class="img-fluid mx-3">
+        <img src="/8.PNG" class="img-fluid mx-3">
 
-        <img src="/gallery/11.JPG" class="img-fluid mx-3">
+        <img src="/9.PNG" class="img-fluid mx-3">
 
-        <img src="/gallery/12.JPG" class="img-fluid mx-3">
-        <img src="/gallery/13.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/14.AVIF" class="img-fluid mx-3">
 
-        <img src="/gallery/15.JPG" class="img-fluid mx-3">
-        <img src="/gallery/16.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/17.JPG" class="img-fluid mx-3">
+        <img src="/10.JPG" class="img-fluid mx-3">
 
-        <img src="/gallery/18.JPG" class="img-fluid mx-3">
-        <img src="/gallery/19.JPG" class="img-fluid mx-3">
+        <img src="/11.JPG" class="img-fluid mx-3">
+
+        <img src="/12.JPG" class="img-fluid mx-3">
+        <img src="/13.JPG" class="img-fluid mx-3">
+
+        <img src="/14.AVIF" class="img-fluid mx-3">
+
+        <img src="/15.JPG" class="img-fluid mx-3">
+        <img src="/16.JPG" class="img-fluid mx-3">
+
+        <img src="/17.JPG" class="img-fluid mx-3">
+
+        <img src="/18.JPG" class="img-fluid mx-3">
+        <img src="/19.JPG" class="img-fluid mx-3">
       </div>
     </div>
   </div>
@@ -134,7 +199,7 @@
 
 
   <!-- BIOGRAHY -->
-  <div class="row biography bg-dark py-3" style="box-shadow: 0px 0px 7px 7px black;">
+  <div class="row biography bg-dark py-3 reveal" style="box-shadow: 0px 0px 7px 7px black;">
     <h1 class="text-center text-white">Biography</h1>
     <div class="col-lg-6 col-md-6 col-12 aboutUsImg my-4">
       <img style="" class="mx-auto" src="/logo.png">
@@ -156,7 +221,7 @@
 
 
   <!-- Video -->
-  <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);; box-shadow: 2px 2px 7px black; ;">
+  <div class="row py-4 reveal" style="background-color: rgba(0, 0, 0, 0.274);; box-shadow: 2px 2px 7px black; ;">
     <!-- <h1 class="text-center text-white">Take a look on our Events</h1> -->
     <h1 class="text-center text-white">Take a look on our Events</h1>
     <div class="video">

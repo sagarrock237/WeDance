@@ -21,7 +21,10 @@
                     <li class="nav-item mx-4">
                         <a [ngClass]="{'border-top border-bottom': gallery, '': !gallery}" class="nav-link" style="cursor: pointer;" (click)="routee('/gallery')">Gallery</a>
                     </li>
-                    <li class="nav-item mx-4 dropdown">
+                    <li class="nav-item mx-4">
+                        <a [ngClass]="{'border-top border-bottom': services, '': !services}" class="nav-link" style="cursor: pointer;" (click)="routee('/services')">Services</a>
+                    </li>
+                    <!-- <li class="nav-item mx-4 dropdown">
                         <a [ngClass]="{'border-top border-bottom': services, '': !services}" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Services
@@ -34,6 +37,9 @@
                             </li>
                             <li><a class="dropdown-item" style="cursor: pointer;" (click)="routee('/services')">See All</a></li>
                         </ul>
+                    </li> -->
+                    <li class="nav-item mx-4">
+                        <a [ngClass]="{'border-top border-bottom': careers, '': !careers}"  class="nav-link" style="cursor: pointer;" (click)="routee('/careers')">Careers</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a [ngClass]="{'border-top border-bottom': contact, '': !contact}" class="nav-link" style="cursor: pointer;" (click)="routee('/contact')">Contact Us</a>

@@ -1,32 +1,40 @@
+@if(spinner){
+<app-spinner></app-spinner>
+}
+
 <div class="main py-4" style="display: flex; justify-content: center; align-items: center;">
     <div class="contactForm col-lg-4 col-md-6 col-11 mx-auto pb-5 px-3 my-5 mb-5">
 
 
         <h1 class="text-end mx-2 contactFormHeading mb-4 px-3 mt-3">Contact</h1>
 
-        <div class="form">
-
-            <div class="my-3">
-                <label class="text-white">Name: </label>
-                <input type="text" class="form-control" placeholder="Enter you name">
+        <form [formGroup]="contactForm">
+            <div class="form-group my-4">
+                <label for="name">Full Name <span class="text-danger">*</span></label>
+                <input class="form-control" formControlName="name" type="text" placeholder="Enter Your Name">
+                @if(contactForm.get('name')?.invalid && contactForm.get('name')?.touched){
+                <span class="text-danger">Required</span>
+                }
             </div>
-
-            <div class="my-3">
-                <label class="text-white">Email: </label>
-                <input type="text" class="form-control" placeholder="Enter you name">
+            <div class="form-group my-4">
+                <label for="email">Email <span class="text-danger">*</span></label>
+                <input class="form-control" formControlName="email" type="email" placeholder="Enter your Email">
+                @if(contactForm.get('email')?.invalid && contactForm.get('email')?.touched){
+                <span class="text-danger">Required</span>
+                }
             </div>
-
-            <div class="my-3">
-                <label class="text-white">Number: </label>
-                <input type="text" class="form-control" placeholder="Enter you name">
+            <div class="form-group my-4">
+                <label for="email">Number <span class="text-danger">*</span></label>
+                <input class="form-control" type="number" formControlName="number" placeholder="Enter your Number">
+                @if(contactForm.get('number')?.invalid && contactForm.get('number')?.touched){
+                <span class="text-danger">Required</span>
+                }
             </div>
-
-            <div class="my-3">
-                <label class="text-white">Comment: </label>
-                <textarea type="text" class="form-control" placeholder="Enter you name"></textarea>
+            <div class="form-group my-4">
+                <label for="message">Comment or message</label>
+                <textarea class="form-control" placeholder="Enter your Comment" formControlName="comment"></textarea>
             </div>
-
-            <button class="btn btn-success mt-3">Submit</button>
-        </div>
+            <button type="submit" class="btn btn-success" (click)="saveData()">Send Message</button>
+        </form>
     </div>
 </div>

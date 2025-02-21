@@ -1,0 +1,94 @@
+@if(spinner){
+    <app-spinner></app-spinner>
+}
+
+<div class="container-fluid px-0">
+    <div class="row carrerMain mx-auto">
+        <div class="carrerMainIn" style="background-color: rgba(0, 0, 0, 0.397);">
+
+            <div class="col-lg-5 col-md-6 col-12 mx-0 px-0">
+                <div class="text-center" style="height: 100%; display: flex; flex-direction: column;">
+
+                    <div class="my-5">
+                        <span class="carrerMainHeading">Define your future with <img src="/weddance.png"></span>
+                    </div>
+
+
+                </div>
+
+
+                <div class="mx-auto contactForm mb-5 mx-0">
+                    <form [formGroup]="joinForm">
+                        <div class="form-group my-3">
+                            <label><b>Full Name: </b> <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" formControlName="name" placeholder="Enter your Name">
+                           @if(joinForm.get('name')?.invalid && joinForm.get('name')?.touched){
+                            <span class="text-danger">Required</span>
+                           }
+                        </div>
+
+                        <div class="form-group my-3">
+                            <label><b>Number: </b><span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="number" placeholder="Enter your Number">
+                            @if(joinForm.get('number')?.invalid && joinForm.get('number')?.touched){
+                                <span class="text-danger">Required</span>
+                               }
+                            
+                        </div>
+
+                        <div class="form-group my-3">
+                            <label><b>Email Id: </b><span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" formControlName="email" placeholder="Enter your Email Id">
+                            @if(joinForm.get('email')?.invalid && joinForm.get('email')?.touched){
+                                <span class="text-danger">Required</span>
+                               }
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="form-group mx-1">
+                                <label><b>Age: </b></label>
+                                <input type="number" class="form-control" formControlName="age" placeholder="Age">
+                                @if(joinForm.get('age')?.invalid && joinForm.get('age')?.touched){
+                                    <span class="text-danger">Required</span>
+                                   }
+                            </div>
+
+                            <div class="form-group mx-1">
+                                <label><b>Gender: </b></label>
+                                <select class="form-select" formControlName="gender" aria-label="Default select example">
+                                    <option selected value="">Select your gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Transgender">Transgender</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group my-3">
+                            <label><b>Location / Address: </b><span class="text-danger">*</span></label>
+                            <input type="text" formControlName="location" class="form-control" placeholder="Enter your Address">
+                            @if(joinForm.get('location')?.invalid && joinForm.get('location')?.touched){
+                                <span class="text-danger">Required</span>
+                               }
+                        </div>
+
+                        <div class="form-group my-3">
+                            <label><b>Attach your Resume: </b><span class="text-danger">*</span></label>
+                            <input type="file" (change)="onFileSelected($event)" class="form-control" />
+                            <!-- <button (click)="downloadBase64()">sdh</button>  -->
+                        </div>
+
+                        <button class="btn btn-success" (click)="saveData()">Apply</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
