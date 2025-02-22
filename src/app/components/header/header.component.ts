@@ -14,51 +14,6 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(private route: Router) {
-    setTimeout(() => {
-      if (this.route.url == '/') {
-        this.home = true;
-        this.gallery = false;
-        this.packages = false;
-        this.services = false;
-        this.contact = false;
-        this.careers = false;
-      } else if (this.route.url == '/packages') {
-        this.packages = true;
-        this.home = false;
-        this.gallery = false;
-        this.careers = false;
-        this.services = false;
-        this.contact = false;
-      } else if (this.route.url == '/gallery') {
-        this.gallery = true;
-        this.home = false;
-        this.careers = false;
-        this.packages = false;
-        this.services = false;
-        this.contact = false;
-      } else if (this.route.url == '/services') {
-        this.services = true;
-        this.home = false;
-        this.gallery = false;
-        this.careers = false;
-        this.packages = false;
-        this.contact = false;
-      } else if (this.route.url == '/contact') {
-        this.contact = true;
-        this.home = false;
-        this.careers = false;
-        this.gallery = false;
-        this.packages = false;
-        this.services = false;
-      } else if(this.route.url == '/careers'){
-        this.contact = false;
-        this.home = false;
-        this.careers = true;
-        this.gallery = false;
-        this.packages = false;
-        this.services = false;
-      }
-    }, 50)
   }
 
   ngOnInit(): void {

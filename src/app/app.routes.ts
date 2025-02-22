@@ -5,6 +5,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { PackagesComponent } from './components/packages/packages.component';
 import { CareersComponent } from './components/careers/careers.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +32,13 @@ export const routes: Routes = [
     {
         path:'careers',
         component:CareersComponent
+    },
+    {
+        path:'login',
+        component:LoginComponent
+    },
+    {
+        path:'registerxyz',
+        component:RegisterComponent
     }
 ];

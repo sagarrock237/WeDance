@@ -1,7 +1,75 @@
+@if(spinner){
+<app-spinner></app-spinner>
+}
+
+<!-- Filled POPUP -->
+@if(openFilled){
+
+    <div class="filled" (click)="toggleFilled()">
+      <div class="filled-in">
+        <img src="https://emojiisland.com/cdn/shop/products/4_large.png?v=1571606116">
+        <h1 style="color:rgb(95, 86, 86),; font-weight: 500;">We will contact you soon.</h1>
+      </div>
+    </div>
+    }
+    
+
+
+
+<!-- JOIN US FORM -->
+
+@if(form){
+<div class="joinUsForm">
+    <div class="myForm py-4 px-4">
+        <div>
+            <svg style="cursor: pointer;" (click)="letsConnect('cancel', '')" xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-x-circle-fill text-danger" viewBox="0 0 16 16">
+                <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+            </svg>
+            <h2 class="text-center mb-4">Lets Connect</h2>
+        </div>
+        <form [formGroup]="joinForm">
+            <div class="form-group my-4">
+                <label for="exampleInputEmail1"><span>Name</span></label>
+                <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter Name">
+
+            </div>
+            <div class="form-group my-4">
+                <label for="exampleInputPassword1"><span>Email</span></label>
+                <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1"
+                    placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+
+            <div class="form-group my-4">
+                <label for="exampleInputPassword1"><span>Number</span></label>
+                <input type="number" formControlName="number" class="form-control" id="exampleInputPassword1"
+                    placeholder="Number">
+            </div>
+
+            <!-- <button (click)="post()">dasd</button>  -->
+
+            <!-- <input type="file" (change)="handleUpload($event)">
+      
+            <input type="file" (change)="onFileSelected($event)" class="form-control" />
+            <button (click)="downloadBase64()">sdh</button> -->
+
+            <button type="submit" class="btn btn-primary" (click)="saveData()">Submit</button>
+        </form>
+    </div>
+</div>
+}
+
+
+
+<!-- PACKAGE -->
 <div class="container-fluid main py-5 pt-1">
     <div class="row">
 
-        <div class="mt-3" style="line-height: 30px; display: block; text-align: center;">
+        <div class="mt-3 packageHeading" style="line-height: 30px; display: block; text-align: center;">
             <span style="font-size: 50px; text-align: center; font-weight: 600; margin-bottom: 0px;">Our
                 Packages</span><br>
             <span class="my-0" style="font-size: 20px; text-align: center; font-weight: 500; word-spacing: 5px;">Simple
@@ -12,7 +80,7 @@
 
         <!-- Popular -->
         <div class="col-lg-3 col-md-3 col-12 px-2 my-4">
-            <div class="bg-white text-center mx-3 py-4"
+            <div class="bg-white text-center mx-3 py-4 packageCompo1"
                 style="display: flex; justify-content: center; flex-direction: column; border-radius: 30px;">
                 <span style="font-size:25px; font-weight: 600;">Popular Package</span>
                 <span style="font-size:50px; font-weight: 700; color: #b9a11a; display: flex; justify-content: center;">
@@ -130,9 +198,11 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
@@ -175,14 +245,15 @@
                     </div>
                 </div>
 
-                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;">Get Plan</button>
+                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;"
+                    (click)="letsConnect('open', 'Popular')">Get Plan</button>
             </div>
         </div>
 
 
         <!-- Silver -->
         <div class="col-lg-3 col-md-3 col-12 px-2 my-4">
-            <div class="bg-white text-center mx-3 py-4"
+            <div class="bg-white text-center mx-3 py-4 packageCompo2"
                 style="display: flex; justify-content: center; flex-direction: column; border-radius: 30px;">
                 <span style="font-size:25px; font-weight: 600;">Silver Package</span>
                 <span style="font-size:50px; font-weight: 700; color: #b9a11a; display: flex; justify-content: center;">
@@ -267,13 +338,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">We’ll cover Sangeet
+                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">We’ll
+                            cover Sangeet
                             Entry & Varmala Entry with (Props & Dancers)</span>
                     </div>
                 </div>
@@ -281,13 +355,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Bride & Groom Entry with
+                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Bride &
+                            Groom Entry with
                             Props & Dancers</span>
                     </div>
                 </div>
@@ -295,13 +372,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Background dancers
+                        <span class="my-2 text-start text-secondary"
+                            style="font-size:15px; font-weight: 600;">Background dancers
                             provided (5-6 Performance)</span>
                     </div>
                 </div>
@@ -339,14 +419,15 @@
                     </div>
                 </div>
 
-                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;">Get Plan</button>
+                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;"
+                    (click)="letsConnect('open', 'Silver')">Get Plan</button>
             </div>
         </div>
 
 
         <!-- Golden -->
         <div class="col-lg-3 col-md-3 col-12 px-2 my-4">
-            <div class="bg-white text-center mx-3 py-4"
+            <div class="bg-white text-center mx-3 py-4 packageCompo3"
                 style="display: flex; justify-content: center; flex-direction: column; border-radius: 30px;">
                 <span style="font-size:25px; font-weight: 600;">Gold Package</span>
                 <span style="font-size:50px; font-weight: 700; color: #b9a11a; display: flex; justify-content: center;">
@@ -432,13 +513,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">We’ll cover Sangeet
+                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">We’ll
+                            cover Sangeet
                             Entry & Varmala Entry with (Props & Dancers)</span>
                     </div>
                 </div>
@@ -509,14 +593,15 @@
                     </div>
                 </div>
 
-                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;">Get Plan</button>
+                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;"
+                    (click)="letsConnect('open', 'Golden')">Get Plan</button>
             </div>
         </div>
 
 
         <!-- Platinum -->
         <div class="col-lg-3 col-md-3 col-12 px-2 my-4">
-            <div class="bg-white text-center mx-3 py-4"
+            <div class="bg-white text-center mx-3 py-4 packageCompo4"
                 style="display: flex; justify-content: center; flex-direction: column; border-radius: 30px;">
                 <span style="font-size:25px; font-weight: 600;">Platinum Package</span>
                 <span style="font-size:50px; font-weight: 700; color: #b9a11a; display: flex; justify-content: center;">
@@ -619,13 +704,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Bride & Groom Entry with
+                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Bride &
+                            Groom Entry with
                             Props & Dancers</span>
                     </div>
                 </div>
@@ -633,13 +721,16 @@
 
                 <div class="row my-1 mx-1">
                     <div class="col-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg>
                     </div>
 
                     <div class="col-10 text-start mx-0 px-0">
-                        <span class="my-2 text-start text-secondary" style="font-size:15px; font-weight: 600;">Background dancers
+                        <span class="my-2 text-start text-secondary"
+                            style="font-size:15px; font-weight: 600;">Background dancers
                             provided (5-6 Performance)</span>
                     </div>
                 </div>
@@ -679,7 +770,8 @@
                 </div>
 
 
-                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;">Get Plan</button>
+                <button class="btn mx-4 mt-4" style="background-color: #f1d744; font-weight: 600;"
+                    (click)="letsConnect('open', 'Platinum')">Get Plan</button>
             </div>
         </div>
 

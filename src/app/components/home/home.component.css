@@ -1,13 +1,16 @@
 .main {
     background: url('https://img.freepik.com/premium-photo/abstract-gold-bokeh-with-black-background_34836-3152.jpg?w=740');
-    height: 100vh;
+    height: 140vh;
     width: 100%;
-
     background-position: bottom;
     background-size: cover;
     position: fixed;
     top: 0px;
     z-index: -1;
+}
+
+section {
+    font-size: 5px;
 }
 
 .mainImage {
@@ -36,6 +39,51 @@
 .mainImage h2 {
     font-size: 25px;
     text-align: center;
+}
+
+.mainImageText h1 {
+    animation-name: homeHeading1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.mainImageText h2 {
+    animation-name: homeHeading2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.mainImageText button {
+    animation-name: homeHeadingBtn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes homeHeading1 {
+    from {
+        margin-left: -200%;
+    }
+
+    to {}
+}
+
+@keyframes homeHeading2 {
+    from {
+        margin-right: -200%;
+    }
+
+    to {}
+}
+
+@keyframes homeHeadingBtn {
+    from {
+        margin-top: -100%;
+    }
+
+    to {
+        /* display: block; */
+    }
 }
 
 
@@ -70,11 +118,50 @@
     box-shadow: 0px 0px 6px black;
     font-size: 20px;
     font-weight: 500;
+    animation-name: serviceItem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.serviceIte img {
+    animation-name: serviceItem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes serviceItem {
+    0% {
+        padding-left: 4%;
+    }
+
+    25% {
+        padding-left: 0%;
+    }
+
+    50% {
+        padding-left: 4%;
+    }
+
+    75% {
+        padding-left: 0%;
+    }
+
+    100% {
+        padding-left: 4%;
+    }
 
 }
 
 
+
+
+
 /* gallery */
+
+.gallery-head{
+    font-size: clamp(3vw, 1vw, 1vh);
+}
 
 .gallery {
     /* overflow-x: scroll; */
@@ -109,6 +196,9 @@
 .biography img {
     height: 220px;
     /* width: 300px; */
+}
+.bioheading{
+    font-size: clamp(3vw, 1vw, 1vh);
 }
 
 
@@ -168,6 +258,7 @@
     position: fixed;
     height: 100vh;
     width: 100vw;
+    top: 0px;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.699);
     z-index: 5;
@@ -202,12 +293,32 @@
     height: 100%;
     width: 100%;
     z-index: 3;
-    background-color: rgba(0, 0, 0, 0.769);
+    background-color: rgba(0, 0, 0, 0.906);
 }
 
 .myForm {
-    background-color: white;
-    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.854);
+    border-radius: 20px;
+}
+
+
+/* SERVICE DETAIL */
+
+.service-details {
+    background-color: rgba(0, 0, 0, 0.701);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.popupHead{
+    font-size: 24px;
 }
 
 
@@ -232,13 +343,32 @@
 
 
 @media screen and (max-width: 480px) {
+
+    .gallery-head{
+        font-size: clamp(7vw, 1vw, 1vh);
+    }
+    
+
+    section {
+        font-size: 14px;
+    }
+
+
+    .mainImage {
+        height: 60vh;
+    }
+
     .mainImage h1 {
-        font-size: 25px;
+        font-size: 19px;
     }
 
     .mainImage h2 {
         font-size: 15px;
         text-align: center;
+    }
+
+    .bioheading{
+        font-size: clamp(7vw, 1vw, 1vh);
     }
 
     .aboutUsImg img {

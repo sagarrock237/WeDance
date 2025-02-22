@@ -1,0 +1,13 @@
+.auth{
+  display: flex;
+  justify-content:center ;
+  height: 97vh;
+  width: 100%;
+  align-items: center ;
+  background-color: black
+}
+
+.authForm{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
