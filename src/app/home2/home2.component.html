@@ -1,0 +1,299 @@
+@if(spinner){
+  <app-spinner></app-spinner>
+  }
+  
+  
+  
+  
+  <!-- SERVICE DETAIL -->
+  
+  @if(servicePopup){
+  <div class="service-details row" (click)="closePopup()">
+    <div class="detail-text bg-black col-lg-5 col-md-6 col-11 p-4 pt-0" style="border-radius: 20px;">
+      <section>
+        <h1 class="text-shadow text-white mb-4 popupHead" style="border-bottom: 2px solid white;"><u>{{this.head}}</u>
+        </h1>
+      </section>
+      <span class="text-white" style="font-size: 18px; letter-spacing: 1px;">
+        {{this.content1}}<br><br>
+  
+        {{this.content2}}<br><br>
+        You can contact us further queries to bring a lot of joy and happiness to your wedding!"
+  
+      </span><br>
+      <!-- <button class="btn mt-3 mx-auto" style="background-color: #fceb8e;"><b>Connect Now</b></button> -->
+    </div>
+  </div>
+  }
+  
+  <div class="main"></div>
+  
+  
+  <!-- JOIN US FORM -->
+  
+  @if(form){
+  <div class="joinUsForm">
+    <div class="myForm py-4 px-4">
+      <div>
+        <svg style="cursor: pointer;" (click)="letsConnect('cancel')" xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-x-circle-fill text-danger" viewBox="0 0 16 16">
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+        </svg>
+        <h2 class="text-center mb-4">Lets Connect</h2>
+      </div>
+      <form [formGroup]="joinForm">
+        <div class="form-group my-4">
+          <label for="exampleInputEmail1"><span>Enter your name</span></label>
+          <input type="text" class="form-control" formControlName="name" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="Enter Name">
+  
+        </div>
+        <div class="form-group my-4">
+          <label for="exampleInputPassword1"><span>Enter your Email</span></label>
+          <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+  
+        <div class="form-group my-4">
+          <label for="exampleInputPassword1"><span>Enter your Number</span></label>
+          <input type="number" formControlName="number" class="form-control" id="exampleInputPassword1"
+            placeholder="Number">
+        </div>
+  
+        <!-- <button (click)="post()">dasd</button>  -->
+  
+        <!-- <input type="file" (change)="handleUpload($event)">
+    
+          <input type="file" (change)="onFileSelected($event)" class="form-control" />
+          <button (click)="downloadBase64()">sdh</button> -->
+  
+        <button type="submit" class="btn btn-primary" (click)="saveData()">Submit</button>
+      </form>
+    </div>
+  </div>
+  }
+  
+  
+  
+  <!-- Filled POPUP -->
+  @if(openFilled){
+  
+  <div class="filled" (click)="toggleFilled()">
+    <div class="filled-in">
+      <img src="https://emojiisland.com/cdn/shop/products/4_large.png?v=1571606116">
+      <h1 style="color:rgb(95, 86, 86),; font-weight: 500;">We will contact you soon.</h1>
+    </div>
+  </div>
+  }
+  
+  <!-- YOUTUBE VIDEO -->
+  @if(video){
+  <div class="videoPlay">
+    <svg style="cursor: pointer;" (click)="playVideo('close')" xmlns="http://www.w3.org/2000/svg" width="23" height="23"
+      fill="currentColor" class="bi bi-x-circle-fill text-danger my-4" viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+    </svg>
+    <youtube-player [videoId]="'56uy6LoPwjU'" [width]="640" [height]="360"></youtube-player>
+  </div>
+  }
+  
+  
+  
+  <div class="container-fluid">
+    <div class="row mainImage">
+      <div class="mainImage-in p-0">
+        <div class="col-lg-12 col-md-12 col-12 w-100 py-2" style="background-color: rgba(0, 0, 0, 0.582);">
+          <div class="mainImageText">
+            <h1 class="text-center">Celebrate Your Special Moments with Dance</h1>
+            <h2 class="text-center">Grace, Energy, and Joy in Every Step! </h2>
+            <div class="text-center"><button class="btn btn-success explorebtn" (click)="letsConnect('open')">Connect
+                Now</button></div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- Services -->
+    <div class="row mt-5">
+      <div class="col-lg-3 col-md-6 col-12 my-2">
+        <div class="mx-5 bg-white serviceItem"
+          (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)">
+          <img style="height: 180px;" src="https://cdn-icons-png.flaticon.com/512/40/40203.png">
+          <section>
+            <h1 class="text-shadow my-3">Couple Dance</h1>
+          </section>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-12 my-2">
+        <div class="mx-5 bg-white serviceItem"
+          (click)="openPopUp(serviceDataArray[1].head, serviceDataArray[1].content1, serviceDataArray[1].content2)">
+          <img style="height: 180px;" src="https://cdn0.iconfinder.com/data/icons/party-human-1/66/29-512.png">
+  
+          <section>
+            <h1 class="text-shadow my-3">Group Dance</h1>
+          </section>
+        </div>
+      </div>
+  
+  
+      <div class="col-lg-3 col-md-6 col-12 my-2">
+        <div class="mx-5 bg-white serviceItem"
+          (click)="openPopUp(serviceDataArray[2].head, serviceDataArray[2].content1, serviceDataArray[2].content2)">
+          <img style="height: 180px;"
+            src="https://images.vexels.com/media/users/3/236440/isolated/preview/5cff4483ed2d0027d2512e2b29c227c3-girl-in-long-dress-silhouette.png">
+          <section>
+            <h1 class="text-shadow my-3">Ladies Sangeet</h1>
+          </section>
+        </div>
+      </div>
+  
+  
+      <div class="col-lg-3 col-md-6 col-12 my-2">
+        <div class="mx-5 bg-white serviceItem"
+          (click)="openPopUp(serviceDataArray[3].head, serviceDataArray[3].content1, serviceDataArray[3].content2)">
+          <img style="height: 180px;" src="https://logolook.net/wp-content/uploads/2023/12/Michael-Jackson-logo.png">
+          <section>
+            <h1 class="text-shadow my-3">Solo Dance</h1>
+          </section>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    <!-- About Us -->
+    <div class="row aboutUs mt-5 bg-dark py-5" style="box-shadow: 0px 0px 7px 7px black;">
+      <div class="col-lg-6 col-md-6 col-12 aboutUsImg reveal">
+        <img src="/aboutus.JPG">
+      </div>
+  
+      <div class="col-lg-6 col-md-6 col-11 aboutUsText px-3 py-3 my-auto reveal">
+        <h2>About Us!</h2>
+        <span class="text-center" style="font-size: 17px; text-align: justify; font-weight: 500;">A premier wedding
+          choreography company
+          renowned for transforming ordinary celebrations into extraordinary experiences. With a passion for dance and a
+          knack for creating memorable moments, Raj has brought joy to countless couples and their families through
+          expertly crafted choreography that reflects their unique love stories. His innovative approach combines
+          traditional and contemporary styles, ensuring that every performance is not only stunning but also deeply
+          personal.</span>
+      </div>
+    </div>
+  
+  
+  
+    <!-- OUR GALLERY -->
+  
+    <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);">
+      <div class="breathe-animation my-2 text-center">
+        <span class="gallery-head" style="color: rgb(255, 255, 255);">Gallery</span>
+      </div>
+      <div class="galleryMain" style="overflow-x: scroll;">
+        <div class="col-12 gallery my-0 py-5 d-flex">
+  
+  
+          <img src="/1.JPG" class="img-fluid mx-3">
+  
+          <img src="/2.JPG" class="img-fluid mx-3">
+  
+          <img src="/3.JPG" class="img-fluid mx-3">
+  
+  
+          <img src="/4.JPG" class="img-fluid mx-3">
+  
+          <img src="/5.JPG" class="img-fluid mx-3">
+  
+          <img src="/6.PNG" class="img-fluid mx-3">
+  
+  
+  
+          <img src="/7.PNG" class="img-fluid mx-3">
+  
+          <img src="/8.PNG" class="img-fluid mx-3">
+  
+          <img src="/9.PNG" class="img-fluid mx-3">
+  
+  
+  
+  
+          <img src="/10.JPG" class="img-fluid mx-3">
+  
+          <img src="/11.JPG" class="img-fluid mx-3">
+  
+          <img src="/12.JPG" class="img-fluid mx-3">
+          <img src="/13.JPG" class="img-fluid mx-3">
+  
+          <img src="/14.AVIF" class="img-fluid mx-3">
+  
+          <img src="/15.JPG" class="img-fluid mx-3">
+          <img src="/16.JPG" class="img-fluid mx-3">
+  
+          <img src="/17.JPG" class="img-fluid mx-3">
+  
+          <img src="/18.JPG" class="img-fluid mx-3">
+          <img src="/19.JPG" class="img-fluid mx-3">
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <!-- BIOGRAHY -->
+    <div class="row biography bg-dark py-3 reveal" style="box-shadow: 0px 0px 7px 7px black;">
+      <div class="breathe-animation my-2 text-center">
+        <span class="bioheading" style="color: rgb(255, 255, 255);">Biography</span>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 aboutUsImg my-4">
+        <img class="mx-auto" src="/logo.png">
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 my-4">
+        <div class="text-white mx-auto" style="text-align: justify;">
+          The WedDance presents to you our comprehensive first dance program to ensure that you will have the perfect
+          dance for your once-in-a-lifetime!<br><br>
+          We are here to help organise every detail - whether it be a group performance, the couple’s dance, the very
+          special father daughter dance, the bride & groom entry or even solo performances - our wedding dance
+          choreographers will prepare perfect dance routines for your upcoming Wedding!<br><br>
+  
+          These are some of the perks you can expect:<br><br>
+          <span class="my-2">=> Detailed Consultation for thematic choreography and audience experience
+          </span><br>
+          <span class="my-2">=> Instructors come with relevant experience of a Professional DanceSport background
+          </span><br>
+          <span class="my-2">=> Song Editing provided to create maximum impact
+          </span><br>
+          <span class="my-2">=> Flexible Timing for Lessons</span><br>
+          <span class="my-2">=> Private Sessions With Instructors
+          </span><br>
+          <span class="my-2">=> Proven track record - see results in just 4 sessions!
+          </span><br>
+  
+          Let Weddance turn your cherished moments into a dance that will be remembered for a lifetime.
+  
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- Video -->
+    <div class="row py-4 reveal" style="background-color: rgba(0, 0, 0, 0.274);; box-shadow: 2px 2px 7px black; ;">
+      <!-- <h1 class="text-center text-white">Take a look on our Events</h1> -->
+      <h1 class="text-center text-white">Take a look on our Events</h1>
+      <div class="video">
+        <img (click)="playVideo('open')"
+          src="https://community.adobe.com/t5/image/serverpage/image-id/45229i4C951E379A470D7E/image-size/large?v=v2&px=999">
+        <span class="text-white">Play</span>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  </div>

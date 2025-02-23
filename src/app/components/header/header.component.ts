@@ -15,15 +15,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(private route: Router) {
   }
+  admin = false;
 
   ngOnInit(): void {
-
   }
 
   routee(loca: any) {
     this.route.navigateByUrl(loca);
     setTimeout(() => {
-      if (this.route.url == '/') {
+      if (this.route.url == '/home') {
         this.home = true;
         this.gallery = false;
         this.packages = false;
@@ -58,7 +58,7 @@ export class HeaderComponent implements OnInit {
         this.gallery = false;
         this.packages = false;
         this.services = false;
-      } else if(this.route.url == '/careers'){
+      } else if (this.route.url == '/careers') {
         this.contact = false;
         this.home = false;
         this.careers = true;

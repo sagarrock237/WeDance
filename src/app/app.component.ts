@@ -14,17 +14,18 @@ import { ApiService } from './shared/api.service';
 })
 export class AppComponent implements OnInit {
   title = 'dance';
-  welcome = false
+  welcome = true
 
 
 
   constructor(private router: Router, private api: ApiService) {
-    // this.welcome = true
+    this.welcome = true
+    this.router.navigateByUrl('/')
   }
   ngOnInit(): void {
     // this.router.navigateByUrl('/services');
     setTimeout(() => {
-      // this.welcome = false;
+      this.welcome = false;
       // this.router.navigateByUrl('/')
     }, 3000)
   }

@@ -73,11 +73,15 @@
   0% {
     opacity: 0;
     transform: translateY(-200%);
+    visibility: visible;
+    display: block;
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
+    display: block;
   }
 }
 
@@ -93,42 +97,122 @@
   color: #fceb8e;
   font-family: Montserrat;
   word-spacing: 8px;
-
+  visibility: hidden;
+  position: relative;
+  z-index: -10;
 }
 
 /* Delay each word's animation */
 .falling-text:nth-child(1) {
   animation-delay: 0.2s;
 }
-
 .falling-text:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .falling-text:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 .falling-text:nth-child(4) {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 .falling-text:nth-child(5) {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 
 .falling-text:nth-child(6) {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 }
 
 .falling-text:nth-child(7) {
-  animation-delay: 1.4s;
+  animation-delay: 1.2s;
 }
 
 .falling-text:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.falling-text:nth-child(9) {
   animation-delay: 1.6s;
 }
 
+
+.otherone{
+  /* background-color: aliceblue; */
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenpncjZscnA4dGwwMnZvdThjemZ0MW40eDQ3eHMwdjV1b2VmazB2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U3qYN8S0j3bpK/giphy.gif');
+  background-position: center;
+  background-size: cover;
+  animation-name: otherOne;
+  animation-duration: 3.3s;
+  animation-iteration-count: 1;
+}
+
+
+.welcomee{
+  /* display: none; */
+  animation-name: welcomee;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  z-index: -14;
+  visibility: none;
+  position: fixed;
+  top: 0px;
+  left: 0px
+}
+
+@keyframes welcomee {
+  0%{
+    white-space: nowrap; overflow: hidden; height: 100vh; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center; position: fixed; top:0px; left: 0px;
+    z-index: 1;
+  }100%{
+    white-space: nowrap; overflow: hidden; height: 100vh; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center; position: fixed; top:0px; left: 0px;
+    display: none; z-index: 1;
+  }
+}
+
+
+@keyframes otherOne {
+  0%{
+    /* height: 0px;
+    width: 0px; */
+    display: none;
+    
+  }60%{
+  
+  }
+  70%{
+    display: none;
+  }
+  80%{
+    display: block;
+  }
+  90%{
+    display: block;
+  }
+  100%{
+    display: block;
+  }
+}
+
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20%;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.imgIcon {
+  height: 100%;
+  width: 100%;
+}
 
 
 
@@ -179,6 +263,10 @@
 
     font-size: 50px;
 
+  }
+
+  .otherone{
+    display: none;
   }
 
 

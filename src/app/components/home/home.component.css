@@ -45,18 +45,21 @@ section {
     animation-name: homeHeading1;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: 2.9s;
 }
 
 .mainImageText h2 {
     animation-name: homeHeading2;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: 2.9s;
 }
 
 .mainImageText button {
     animation-name: homeHeadingBtn;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: 2.9s;
 }
 
 

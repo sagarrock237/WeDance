@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg w-100">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="logo" src="/logo.png"></a>
@@ -13,16 +15,20 @@
             <form class="d-flex" role="search">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': home, '': !home}" class="nav-link" aria-current="page" style="cursor: pointer;" (click)="routee('/')">Home</a>
+                        <a [ngClass]="{'border-top border-bottom': home, '': !home}" class="nav-link"
+                            aria-current="page" style="cursor: pointer;" (click)="routee('/home')">Home</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': packages, '': !packages}"  class="nav-link" style="cursor: pointer;" (click)="routee('/packages')">Packages</a>
+                        <a [ngClass]="{'border-top border-bottom': packages, '': !packages}" class="nav-link"
+                            style="cursor: pointer;" (click)="routee('/packages')">Packages</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': gallery, '': !gallery}" class="nav-link" style="cursor: pointer;" (click)="routee('/gallery')">Gallery</a>
+                        <a [ngClass]="{'border-top border-bottom': gallery, '': !gallery}" class="nav-link"
+                            style="cursor: pointer;" (click)="routee('/gallery')">Gallery</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': services, '': !services}" class="nav-link" style="cursor: pointer;" (click)="routee('/services')">Services</a>
+                        <a [ngClass]="{'border-top border-bottom': services, '': !services}" class="nav-link"
+                            style="cursor: pointer;" (click)="routee('/services')">Services</a>
                     </li>
                     <!-- <li class="nav-item mx-4 dropdown">
                         <a [ngClass]="{'border-top border-bottom': services, '': !services}" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -39,13 +45,16 @@
                         </ul>
                     </li> -->
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': careers, '': !careers}"  class="nav-link" style="cursor: pointer;" (click)="routee('/careers')">Careers</a>
+                        <a [ngClass]="{'border-top border-bottom': careers, '': !careers}" class="nav-link"
+                            style="cursor: pointer;" (click)="routee('/careers')">Careers</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a [ngClass]="{'border-top border-bottom': contact, '': !contact}" class="nav-link" style="cursor: pointer;" (click)="routee('/contact')">Contact Us</a>
+                        <a [ngClass]="{'border-top border-bottom': contact, '': !contact}" class="nav-link"
+                            style="cursor: pointer;" (click)="routee('/contact')">Contact Us</a>
                     </li>
                 </ul>
             </form>
         </div>
     </div>
 </nav>
+    

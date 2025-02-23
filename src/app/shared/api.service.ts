@@ -14,6 +14,8 @@ export class ApiService implements OnInit{
     firebase.initializeApp(environment.firebaseConfig);
   }
 
+  
+
   ngOnInit(): void {
   }
   // async addSandwich(collection: any, data: any) { // (3)

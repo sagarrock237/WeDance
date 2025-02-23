@@ -13,13 +13,26 @@ import { YouTubePlayer } from '@angular/youtube-player';
 export class GalleryComponent {
 
   image = true;
+  opendedImage = false;
+  largeImage = '';
 
-  shift(action:any){
-    if(action == 'image'){
+  shift(action: any) {
+    if (action == 'image') {
       this.image = true
-    }else{
-      this.image = false;
+    } else {
+      this.image = false;``
     }
   }
+
+  openImage(data: any, image:any) {
+    if (data == 'open') {
+      this.largeImage = image;
+      this.opendedImage = true
+    } else {
+      this.opendedImage = false
+    }
+  }
+
+
 
 }

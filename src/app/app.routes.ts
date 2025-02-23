@@ -7,11 +7,18 @@ import { PackagesComponent } from './components/packages/packages.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AdminComponent } from './auth/admin/admin.component';
+import { AdminDataComponent } from './auth/admin-data/admin-data.component';
+import { Home2Component } from './home2/home2.component';
 
 export const routes: Routes = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'home',
+        component: Home2Component
     },
     {
         path: 'gallery',
@@ -40,5 +47,13 @@ export const routes: Routes = [
     {
         path:'registerxyz',
         component:RegisterComponent
+    },
+    {
+        path: 'admin',
+        component: AdminComponent
+    },
+    {
+        path: 'adminData/:name',
+        component: AdminDataComponent
     }
 ];
