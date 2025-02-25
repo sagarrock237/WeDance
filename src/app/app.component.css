@@ -86,6 +86,25 @@
 }
 
 
+.logo{
+  height: 200px;
+  animation-name: logo;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  visibility: hidden;
+}
+
+@keyframes logo {
+  from{
+    opacity: 0;
+    visibility: visible;
+  }
+  to{
+    visibility: visible;
+  }
+}
+
+
 
 .falling-text {
   display: inline-block;
@@ -162,7 +181,8 @@
   visibility: none;
   position: fixed;
   top: 0px;
-  left: 0px
+  left: 0px;
+  visibility: hidden;
 }
 
 @keyframes welcomee {

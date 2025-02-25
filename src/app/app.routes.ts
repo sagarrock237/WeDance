@@ -10,6 +10,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminDataComponent } from './auth/admin-data/admin-data.component';
 import { Home2Component } from './home2/home2.component';
+import { ReviewComponent } from './components/review/review.component';
 
 export const routes: Routes = [
     {
@@ -55,5 +56,9 @@ export const routes: Routes = [
     {
         path: 'adminData/:name',
         component: AdminDataComponent
+    },
+    {
+        path: 'review',
+        component: ReviewComponent
     }
 ];

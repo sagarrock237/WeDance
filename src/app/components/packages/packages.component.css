@@ -225,4 +225,18 @@ section {
     section {
         font-size: 20px;
     }
+
+    .packageCompo1{
+        animation: none;
+    }
+
+    .packageCompo2{
+        animation: none;
+    }
+    .packageCompo3{
+        animation: none;
+    }
+    .packageCompo4{
+        animation: none;
+    }
 }

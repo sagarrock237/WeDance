@@ -1,16 +1,16 @@
 <div class="container-fluid main pb-4">
 
    <div class="row">
-      <div class="col-lg-8 col-md-8 col-12 mainHeading">
+      <div class="col-lg-7 col-md-7 col-12 mainHeading">
          <div class="headings" style="display: flex; flex-direction: column; justify-content: space-between;">
-            <div class="breathe-animation my-2">
-               <span style="color: black;">Best Dance Studio</span>
+            <div class="my-2 serviceHead">
+               <span style="color: black; font-family: Montserrat;">Best Service from WEDDANCE</span>
             </div>
             <span class="mainContent mx-1 ">Feel The Beat, Own The Floor...</span>
          </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-12" style="display: flex; justify-content: start; align-items: center;">
+      <div class="col-lg-5 col-md-5 col-12" style="display: flex; justify-content: start; align-items: center;">
          <img class="mainImg" src="/Dance-PNG-Picture.png">
       </div>
    </div>
@@ -25,15 +25,25 @@
       <div class="row">
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0" style="display: flex; justify-content: center;">
             <div class="servic service1">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)">View</button>
-               <div class="servictext mx-0 w-100 py-2"><span>Ladies Sangeet</span></div>
+               <!-- <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)">View</button> -->
+               <div class="servictext mx-0 w-100 py-2"><span>Ladies Sangeet</span>
+                  <img
+                     (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)"
+                     style="height: 35px;" class="my-auto"
+                     src="https://png.pngtree.com/png-clipart/20220206/original/pngtree-gold-arrow-head-png-image_7263825.png">
+               </div>
             </div>
          </div>
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0" style="display: flex; justify-content: center;">
             <div class="servic service2">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[1].head, serviceDataArray[1].content1, serviceDataArray[1].content2)">View</button>
+              <!-- <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[1].head, serviceDataArray[1].content1, serviceDataArray[1].content2)">View</button> -->
                <div class="servictext mx-0 w-100 py-2"><span>Bride and Groom entry</span></div>
+               <img
+               (click)="openPopUp(serviceDataArray[1].head, serviceDataArray[1].content1, serviceDataArray[1].content2)"
+               style="height: 35px;" class="my-auto"
+               src="https://png.pngtree.com/png-clipart/20220206/original/pngtree-gold-arrow-head-png-image_7263825.png">
             </div>
          </div>
 
@@ -41,8 +51,13 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0" style="display: flex; justify-content: center;">
             <div class="servic service3">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[2].head, serviceDataArray[2].content1, serviceDataArray[2].content2)">View</button>
+                <!-- <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[2].head, serviceDataArray[2].content1, serviceDataArray[2].content2)">View</button> -->
                <div class="servictext mx-0 w-100 py-2"><span>Couple Dance</span></div>
+               <img
+               (click)="openPopUp(serviceDataArray[2].head, serviceDataArray[2].content1, serviceDataArray[2].content2)"
+               style="height: 35px;" class="my-auto"
+               src="https://png.pngtree.com/png-clipart/20220206/original/pngtree-gold-arrow-head-png-image_7263825.png">
             </div>
          </div>
 
@@ -50,14 +65,16 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service4">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[3].head, serviceDataArray[3].content1, serviceDataArray[3].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[3].head, serviceDataArray[3].content1, serviceDataArray[3].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Solo performance</span></div>
             </div>
          </div>
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service5">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[4].head, serviceDataArray[4].content1, serviceDataArray[4].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[4].head, serviceDataArray[4].content1, serviceDataArray[4].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Wedding choreography</span></div>
             </div>
          </div>
@@ -66,14 +83,16 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service6">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[5].head, serviceDataArray[5].content1, serviceDataArray[5].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[5].head, serviceDataArray[5].content1, serviceDataArray[5].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Event Dance Choreography</span></div>
             </div>
          </div>
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service7">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[6].head, serviceDataArray[6].content1, serviceDataArray[6].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[6].head, serviceDataArray[6].content1, serviceDataArray[6].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Groom Entry Themes</span></div>
             </div>
          </div>
@@ -81,14 +100,16 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service8">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[7].head, serviceDataArray[7].content1, serviceDataArray[7].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[7].head, serviceDataArray[7].content1, serviceDataArray[7].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Bride Entry Themes</span></div>
             </div>
          </div>
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service9">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[8].head, serviceDataArray[8].content1, serviceDataArray[8].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[8].head, serviceDataArray[8].content1, serviceDataArray[8].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Group Dance</span></div>
             </div>
          </div>
@@ -96,7 +117,8 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service10">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[9].head, serviceDataArray[9].content1, serviceDataArray[9].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[9].head, serviceDataArray[9].content1, serviceDataArray[9].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>⁠Friends Dance</span></div>
             </div>
          </div>
@@ -104,7 +126,8 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service11">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[10].head, serviceDataArray[10].content1, serviceDataArray[10].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[10].head, serviceDataArray[10].content1, serviceDataArray[10].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>⁠Grand Varmala Designing</span></div>
             </div>
          </div>
@@ -112,7 +135,8 @@
 
          <div class="col-lg-4 my-3 col-md-4 col-12 px-0 reveal" style="display: flex; justify-content: center;">
             <div class="servic service12">
-               <button class="btn btn-success px-5 viewButton mx-auto my-4" (click)="openPopUp(serviceDataArray[11].head, serviceDataArray[11].content1, serviceDataArray[11].content2)">View</button>
+               <button class="btn btn-success px-5 viewButton mx-auto my-4"
+                  (click)="openPopUp(serviceDataArray[11].head, serviceDataArray[11].content1, serviceDataArray[11].content2)">View</button>
                <div class="servictext mx-0 w-100 py-2"><span>Flashmob Performance</span></div>
             </div>
          </div>
@@ -137,7 +161,8 @@
    <div class="service-details row" (click)="closePopup()">
       <div class="detail-text bg-black col-lg-5 col-md-6 col-11 p-4 pt-0" style="border-radius: 20px;">
          <section>
-            <h1 class="text-shadow text-white mb-4 popupHead" style="border-bottom: 2px solid white;"><u>{{this.head}}</u></h1>
+            <h1 class="text-shadow text-white mb-4 popupHead" style="border-bottom: 2px solid white;">
+               <u>{{this.head}}</u></h1>
          </section>
          <span class="text-white" style="font-size: 18px; letter-spacing: 1px;">
             {{this.content1}}<br><br>

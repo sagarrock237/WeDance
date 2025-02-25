@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit {
         this.services = false;
         this.contact = false;
         this.careers = false;
+        this.review = false
       } else if (this.route.url == '/packages') {
         this.packages = true;
         this.home = false;
@@ -37,6 +38,7 @@ export class HeaderComponent implements OnInit {
         this.careers = false;
         this.services = false;
         this.contact = false;
+        this.review = false
       } else if (this.route.url == '/gallery') {
         this.gallery = true;
         this.home = false;
@@ -44,6 +46,7 @@ export class HeaderComponent implements OnInit {
         this.packages = false;
         this.services = false;
         this.contact = false;
+        this.review = false
       } else if (this.route.url == '/services') {
         this.services = true;
         this.home = false;
@@ -51,6 +54,7 @@ export class HeaderComponent implements OnInit {
         this.careers = false;
         this.packages = false;
         this.contact = false;
+        this.review = false
       } else if (this.route.url == '/contact') {
         this.contact = true;
         this.home = false;
@@ -58,6 +62,7 @@ export class HeaderComponent implements OnInit {
         this.gallery = false;
         this.packages = false;
         this.services = false;
+        this.review = false
       } else if (this.route.url == '/careers') {
         this.contact = false;
         this.home = false;
@@ -65,6 +70,15 @@ export class HeaderComponent implements OnInit {
         this.gallery = false;
         this.packages = false;
         this.services = false;
+        this.review = false
+      }else if (this.route.url == '/review') {
+        this.contact = false;
+        this.home = false;
+        this.careers = false;
+        this.gallery = false;
+        this.packages = false;
+        this.services = false;
+        this.review = true;
       }
     }, 50)
   }
@@ -75,6 +89,7 @@ export class HeaderComponent implements OnInit {
   services = false;
   contact = false;
   careers = false;
+  review = false;
 
 
 

@@ -65,7 +65,7 @@ section {
 
 @keyframes homeHeading1 {
   from {
-      margin-left: -200%;
+    margin-left: -200%;
   }
 
   to {}
@@ -73,7 +73,7 @@ section {
 
 @keyframes homeHeading2 {
   from {
-      margin-right: -200%;
+    margin-right: -200%;
   }
 
   to {}
@@ -81,11 +81,11 @@ section {
 
 @keyframes homeHeadingBtn {
   from {
-      margin-top: -100%;
+    margin-top: -100%;
   }
 
   to {
-      /* display: block; */
+    /* display: block; */
   }
 }
 
@@ -107,54 +107,34 @@ section {
   background-color: rgba(255, 255, 255, 0.575);
   margin-left: -200px;
   border: 1px solid
-      /* color:white; */
+    /* color:white; */
 }
 
 
 /* Services */
 .serviceItem {
+
+  width: 90%;
+  height: 230px;
+
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(20, 20, 20);
+}
+
+.serviceItemIn {
+  background-color: rgba(0, 0, 0, 0.692);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-  border-radius: 30px;
-  box-shadow: 0px 0px 6px black;
-  font-size: 20px;
-  font-weight: 500;
-  animation-name: serviceItem;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  cursor: pointer;
+  align-items: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.serviceIte img {
-  animation-name: serviceItem;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
 
-@keyframes serviceItem {
-  0% {
-      padding-left: 4%;
-  }
-
-  25% {
-      padding-left: 0%;
-  }
-
-  50% {
-      padding-left: 4%;
-  }
-
-  75% {
-      padding-left: 0%;
-  }
-
-  100% {
-      padding-left: 4%;
-  }
-
-}
 
 
 
@@ -162,7 +142,7 @@ section {
 
 /* gallery */
 
-.gallery-head{
+.gallery-head {
   font-size: clamp(3vw, 1vw, 1vh);
 }
 
@@ -185,11 +165,11 @@ section {
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   /* Scroll to the left by 100% of the content width */
@@ -200,7 +180,8 @@ section {
   height: 220px;
   /* width: 300px; */
 }
-.bioheading{
+
+.bioheading {
   font-size: clamp(3vw, 1vw, 1vh);
 }
 
@@ -320,24 +301,37 @@ section {
   z-index: 4;
 }
 
-.popupHead{
+.popupHead {
   font-size: 24px;
 }
+
+
+
+/* EARTH ROTATE */
+
+
+.earthRotate span {
+  background: linear-gradient(90deg, #fceb8e, #f5e9a8, #f7efaf, #fceb8e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 @media screen and (max-width: 900px) {
 
   .aboutUsImg img {
-      height: 260px;
+    height: 260px;
   }
 
   .aboutUsImg {
-      margin: auto;
+    margin: auto;
   }
 
   .aboutUsText {
-      margin-left: -120px;
-      /* margin: auto; */
+    margin-left: -120px;
+    /* margin: auto; */
   }
 }
 
@@ -347,47 +341,47 @@ section {
 
 @media screen and (max-width: 480px) {
 
-  .gallery-head{
-      font-size: clamp(7vw, 1vw, 1vh);
+  .gallery-head {
+    font-size: clamp(7vw, 1vw, 1vh);
   }
-  
+
 
   section {
-      font-size: 14px;
+    font-size: 14px;
   }
 
 
   .mainImage {
-      height: 60vh;
+    height: 60vh;
   }
 
   .mainImage h1 {
-      font-size: 19px;
+    font-size: 19px;
   }
 
   .mainImage h2 {
-      font-size: 15px;
-      text-align: center;
+    font-size: 15px;
+    text-align: center;
   }
 
-  .bioheading{
-      font-size: clamp(7vw, 1vw, 1vh);
+  .bioheading {
+    font-size: clamp(7vw, 1vw, 1vh);
   }
 
   .aboutUsImg img {
-      height: 230px;
+    height: 230px;
   }
 
   .aboutUsText {
-      margin-left: 0px;
-      margin: auto;
+    margin-left: 0px;
+    margin: auto;
   }
 
 
   /* Biography */
   .biography img {
-      height: 130px;
-      /* width: 300px; */
+    height: 130px;
+    /* width: 300px; */
   }
 
 }

@@ -1,10 +1,10 @@
 .carrerMain {
-    background: url('https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://img.freepik.com/free-vector/party-couple-sparkle-background_1048-8602.jpg?t=st=1740488376~exp=1740491976~hmac=f8800e36d4e54012d965fffa974aa76d4de8b7b45c8675eccf572e78ca109bf4&w=1060');
     /* height: 90vh; */
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 }
 
 .carrerMainHeading {
@@ -30,7 +30,7 @@
     background-color: #ffffff96;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 2px 2px 4px #004aad;
+    box-shadow: 2px 2px 4px #fceb8e;
     max-width: 600px;
     /* Adjust as needed */
     width: 95%;
