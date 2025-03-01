@@ -182,7 +182,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 @keyframes welcomee {
@@ -229,9 +229,21 @@
   height: 80px;
 }
 
+.call{
+  position: fixed;
+  bottom: 35%;
+  right: 1px;
+  width: 80px;
+  height: 80px;
+}
+
 .imgIcon {
   height: 100%;
   width: 100%;
+}
+.imgIconCall{
+  height: 75%;
+  width: 75%;
 }
 
 

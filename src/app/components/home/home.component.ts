@@ -54,27 +54,29 @@ export class HomeComponent {
   }
 
 
+    
+  
   serviceDataArray = [
     {
-      head: 'Couple dance',
-      content1: 'Experience the magic of love come to life with our captivating couple dance performance, designed specifically for weddings. This beautifully choreographed routine blends elegance and emotion, perfectly reflecting the unique bond between two people celebrating their special day. From the first graceful twirl to the heartfelt finale, every movement tells a story of romance and joy.',
-      content2: 'Starting Price : 6,000'
+      head: 'Virtual  Wedding Choreography',
+      content1: 'Virtual choreography made convenient with WEDDANCE! Our team has over 200 weddings choreographed worldwide, providing expertise to teach anyone via virtual or recorded tutorials. Experience the in-person feel from the comfort of your own home with ample practice sessions to ensure a prepared final performance.',
+      content2: ''
     },
     {
-      head: 'Group Dance',
-      content1: "The heart of every unforgettable wedding lies the magic of dance, and group dance brings that magic in the performances. We specialize in creating stunning, personalized group dance routines that elevate weddings to an extraordinary experience. Together, we’ll create a performance that you and your guests will cherish forever!",
-      content2: 'Starting Price: 5,000'
+      head: 'Custom Choreography',
+      content1: "For Every Occasion WEDDANCE provides exceptional choreography services for schools, corporates, and the music industry. We create visually stunning performances that capture the essence of any event, with customized dance pieces, music, costumes, and prop ideas tailored to meet the unique needs of each client.",
+      content2: ''
 
     },
     {
-      head: 'Ladies Sangeet',
-      content1: 'We provide personalized lessons, easy-to-follow routines, and a supportive atmosphere, ensuring everyone feels like a star on the dance floor. Join us in creating unforgettable memories as we transform your Sangeet into a dazzling dance extravaganza!',
-      content2: 'Starting Price : 30,000 per 10 songs'
+      head: 'Wedding Choreography',
+      content1: 'Unforgettable weddings start with WEDDANCE wedding choreography. Our team will guide you through every step of your dance journey, from pre-planning to the big day. We ensure a stress-free and fun wedding rehearsal with our sense of humour, preparing you to dance with energy and confidence. Create memories that will last a lifetime with a dance routine your guests will never forget.',
+      content2: ''
     },
     {
-      head: 'Solo dance',
-      content1: "As much as there is excitement for a solo dance performance, there is also the same pressure as to whether the dance will be good or not, but don't worry, when the WedDance team is with you, we train you in such a way that you can perform on your special day, and make your performance remarkable.",
-      content2: 'Starting Price : 5,000'
+      head: 'Personalized Entries',
+      content1: "WEDDANCE can create customised choreography for the bride and groom's entry into the wedding ceremony or reception, making it a memorable and unique moment.",
+      content2: ''
     }
   ]
 

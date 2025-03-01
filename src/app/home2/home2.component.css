@@ -118,7 +118,7 @@ section {
   height: 230px;
 
   border-radius: 10px;
-  box-shadow: 7px 7px 7px rgb(20, 20, 20);
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
 .serviceItemIn {

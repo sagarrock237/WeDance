@@ -37,7 +37,6 @@ import { BrowserModule } from '@angular/platform-browser';
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
-    NgClass,
     SpinnerComponent,
   ],
   templateUrl: './admin-data.component.html',

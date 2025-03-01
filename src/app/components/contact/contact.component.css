@@ -1,26 +1,109 @@
-.main{
-    height: 100vh;
-    width: 100%;
+body {
+    font-family: sans-serif;
+    margin: 0;
     background: linear-gradient(90deg,  #fceb8e, #f5e9a8, #f7efaf, #fceb8e);
-}
-
-.contactForm{
-    background-color: rgba(0, 0, 0, 0.555);
-    border-radius: 30px;
-}
-
-.form-control{
+    color: #333; /* Dark text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; Ensure full viewport height */
+  }
+  
+  .contactInfo{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
     box-shadow: 2px 2px 4px #fceb8e;
-}
-
-.contactFormHeading{
-    background: linear-gradient(90deg,  rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),#f7efaf, #f7efaf, #f7efaf, #f7efaf, #f7efaf,#fceb8e, #fceb8e, #fceb8e);
-
-    /* border: 2px solid rgb(214, 0, 0); */
-    /* box-shadow: 0px 0px 4px black; */
-    border-radius: 30px;
-}
-
-label{
-    color: white;
-}
+    border-radius: 20px;
+  }
+  
+  .contactForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #fceb8e;
+    max-width: 600px; /* Adjust as needed */
+    width: 95%; /* Occupy most of the width on smaller screens */
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  .contactForm h1{
+    font-family: "Times new roman condensed";
+  }
+  
+  label{
+    font-family: "Times new roman condensed";
+  }
+  
+  button{
+    font-family: "Times new roman condensed";
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fceb8e; /* Example color, customize as needed */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #777; /* Slightly lighter label color */
+  }
+  
+  input, textarea {
+    width: calc(100% - 12px); /* Account for padding and border */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 120px;
+  }
+  
+  button {
+    background-color: #fceb8e; /* Example color, customize as needed */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  button:hover {
+    background-color: #e6d15a; /* Darker shade on hover */
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+    text-align: center; /* Center on smaller screens */
+  }
+  
+  .contact-info div {
+    margin-bottom: 10px; /* Space between contact info items */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .container {
+        width: 80%; /* Wider container on larger screens */
+    }
+  
+    .contact-info {
+        text-align: left; /* Align left on larger screens */
+    }
+  
+    .contact-info > div {
+        display: inline-block; /* Arrange items horizontally */
+        margin-right: 20px;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+  }
