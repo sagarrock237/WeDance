@@ -16,6 +16,13 @@ export class AppComponent implements OnInit {
   title = 'dance';
   welcome = true
 
+  message = "Hi, Can i get more info on wedDance?"
+
+  openWhatsApp() {
+    const whatsappUrl = `https://wa.me/919911587963/?text=${encodeURIComponent(this.message)}`;
+    window.location.href = whatsappUrl;
+  }
+
 
 
   constructor(private router: Router, private api: ApiService) {

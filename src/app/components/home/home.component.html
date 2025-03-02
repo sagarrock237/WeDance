@@ -26,7 +26,7 @@
   </div>
   }
   
-  <div class="main"></div>
+  <div class=""></div>
   
   
   <!-- JOIN US FORM -->
@@ -64,9 +64,9 @@
         <!-- <button (click)="post()">dasd</button>  -->
   
         <!-- <input type="file" (change)="handleUpload($event)">
-      
-            <input type="file" (change)="onFileSelected($event)" class="form-control" />
-            <button (click)="downloadBase64()">sdh</button> -->
+        
+              <input type="file" (change)="onFileSelected($event)" class="form-control" />
+              <button (click)="downloadBase64()">sdh</button> -->
   
         <button type="submit" class="btn btn-primary" (click)="saveData()">Submit</button>
       </form>
@@ -101,6 +101,13 @@
   
   
   
+  
+  <video autoplay muted loop id="myVideo" class="main">
+      <source src="/video.mp4" type="video/mp4">
+  </video>
+  
+  
+  
   <div class="container-fluid">
     <div class="row mainImage">
       <div class="mainImage-in p-0">
@@ -121,9 +128,7 @@
   
     <!-- BIOGRAHY -->
     <div class="row biography bg-dark py-3" style="box-shadow: 0px 0px 7px 7px black;">
-      <div class="breathe-animation my-2 text-center">
-        <span class="bioheading" style="color: rgb(255, 255, 255);">Biography</span>
-      </div>
+      <h1 class="text-center text-white">Biography</h1>
       <div class="col-lg-6 col-md-6 col-12 aboutUsImg my-4">
         <img class="mx-auto" src="/logo.png">
       </div>
@@ -163,10 +168,10 @@
   
       <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
         <div class="mx-auto bg-white serviceItem" style="background: url('/virtualWeddibgChoreograhy.jpg'); background-position: center;
-        background-size: contain;">
+          background-size: contain;">
           <div class="serviceItemIn">
             <div></div>
-            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">Virtual Wedding Choreography</span>
+            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">{{serviceDataArray[0].head}}</span>
             <div (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)"
               class="bg-dark w-100 py-2" style="cursor: pointer;">Click to Explore</div>
           </div>
@@ -175,11 +180,11 @@
   
       <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
         <div class="mx-auto bg-white serviceItem" style="background: url('/customChoreography.jpg'); background-repeat: no-repeat; background-position: center;
-        background-size: cover;">
+          background-size: cover;">
           <div class="serviceItemIn">
             <div></div>
-            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">Virtual Wedding Choreography</span>
-            <div (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)"
+            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">{{serviceDataArray[1].head}}</span>
+            <div (click)="openPopUp(serviceDataArray[1].head, serviceDataArray[1].content1, serviceDataArray[1].content2)"
               class="bg-dark w-100 py-2" style="cursor: pointer;">Click to Explore</div>
           </div>
         </div>
@@ -188,11 +193,11 @@
   
       <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
         <div class="mx-auto bg-white serviceItem" style="background: url('/weddingChoreography.jpg'); background-position: center;
-        background-size: cover;">
+          background-size: cover;">
           <div class="serviceItemIn">
             <div></div>
-            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">Virtual Wedding Choreography</span>
-            <div (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)"
+            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">{{serviceDataArray[2].head}}</span>
+            <div (click)="openPopUp(serviceDataArray[2].head, serviceDataArray[2].content1, serviceDataArray[2].content2)"
               class="bg-dark w-100 py-2" style="cursor: pointer;">Click to Explore</div>
           </div>
         </div>
@@ -201,11 +206,11 @@
   
       <div class="col-lg-3 col-md-6 col-12 my-2 reveal">
         <div class="mx-auto bg-white serviceItem" style="background: url('/persnolizedEntries.jpg'); background-position: center;
-        background-size: cover;">
+          background-size: cover;">
           <div class="serviceItemIn">
             <div></div>
-            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">Virtual Wedding Choreography</span>
-            <div (click)="openPopUp(serviceDataArray[0].head, serviceDataArray[0].content1, serviceDataArray[0].content2)"
+            <span style="font-family: Montserrat; font-size: 22px; font-weight: 600;">{{serviceDataArray[3].head}}</span>
+            <div (click)="openPopUp(serviceDataArray[3].head, serviceDataArray[3].content1, serviceDataArray[3].content2)"
               class="bg-dark w-100 py-2" style="cursor: pointer;">Click to Explore</div>
           </div>
         </div>
@@ -231,9 +236,7 @@
     <!-- OUR GALLERY -->
   
     <div class="row py-4" style="background-color: rgba(0, 0, 0, 0.274);">
-      <div class="breathe-animation my-2 text-center">
-        <span class="gallery-head" style="color: rgb(255, 255, 255);">Gallery</span>
-      </div>
+      <h1 class="text-center text-white">Gallery</h1>
       <div class="galleryMain" style="overflow-x: scroll;">
         <div class="col-12 gallery my-0 py-5 d-flex">
   
@@ -296,7 +299,7 @@
   
   
     <!-- About Us -->
-    <div class="row aboutUs mt-5 bg-dark py-5" style="box-shadow: 0px 0px 7px 7px black;">
+    <div class="row aboutUs bg-dark py-5" style="box-shadow: 0px 0px 7px 7px black;">
       <div class="col-lg-6 col-md-6 col-12 aboutUsImg reveal">
         <img src="/aboutus.JPG">
       </div>
@@ -304,7 +307,11 @@
       <div class="col-lg-6 col-md-6 col-11 aboutUsText px-3 py-3 my-auto reveal">
         <h2>About Us!</h2>
         <span class="text-center" style="font-size: 17px; text-align: justify; font-weight: 500;">
-          Raj Bhardwaj is the visionary founder of WEDDANCE, a premier wedding choreography company renowned for transforming ordinary celebrations into extraordinary experiences. His innovative approach combines traditional and contemporary styles, ensuring that every performance is not only stunning but also deeply personal. Whether it’s a first dance, a family flash mob, or a group performance, Raj Bhardwaj and his team at WEDDANCE are here to make your wedding dreams come alive on the dance floor.
+          Raj Bhardwaj is the visionary founder of WEDDANCE, a premier wedding choreography company renowned for
+          transforming ordinary celebrations into extraordinary experiences. His innovative approach combines traditional
+          and contemporary styles, ensuring that every performance is not only stunning but also deeply personal. Whether
+          it’s a first dance, a family flash mob, or a group performance, Raj Bhardwaj and his team at WEDDANCE are here
+          to make your wedding dreams come alive on the dance floor.
         </span>
       </div>
     </div>

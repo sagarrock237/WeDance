@@ -1,5 +1,5 @@
 .main {
-  background: url('https://img.freepik.com/premium-photo/abstract-gold-bokeh-with-black-background_34836-3152.jpg?w=740');
+  /* background: url('https://img.freepik.com/premium-photo/abstract-gold-bokeh-with-black-background_34836-3152.jpg?w=740'); */
   height: 140vh;
   width: 100%;
   background-position: bottom;
@@ -311,7 +311,7 @@ section {
 
 
 .earthRotate span {
-  background: linear-gradient(90deg, #fceb8e, #f5e9a8, #f7efaf, #fceb8e);
+  background: linear-gradient(180deg, #a18759, #e2d798, #ded6b9, #fffefd, #ded6b9, #e2d798, #a18759);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

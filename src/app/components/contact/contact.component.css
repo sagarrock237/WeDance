@@ -68,7 +68,7 @@ body {
   }
   
   button {
-    background-color: #fceb8e; /* Example color, customize as needed */
+    background-color: #e6d15a; /* Example color, customize as needed */
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -79,7 +79,7 @@ body {
   }
   
   button:hover {
-    background-color: #e6d15a; /* Darker shade on hover */
+    background-color: #a18759; /* Darker shade on hover */
   }
   
   .contact-info {

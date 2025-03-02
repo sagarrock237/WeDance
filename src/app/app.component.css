@@ -185,6 +185,10 @@
   /* visibility: hidden; */
 }
 
+/* .boxx{
+  background: linear-gradient(180deg, #a18759, #e2d798, #ded6b9, #fffefd, #ded6b9, #e2d798, #a18759);;
+} */
+
 @keyframes welcomee {
   0%{
     white-space: nowrap; overflow: hidden; height: 100vh; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center; position: fixed; top:0px; left: 0px;
@@ -227,11 +231,13 @@
   right: 10px;
   width: 80px;
   height: 80px;
+  cursor: pointer;
 }
 
 .call{
   position: fixed;
   bottom: 35%;
+  cursor: pointer;
   right: 1px;
   width: 80px;
   height: 80px;
