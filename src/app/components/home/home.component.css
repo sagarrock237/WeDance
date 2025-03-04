@@ -350,6 +350,12 @@ section {
     font-size: 14px;
   }
 
+  .main {
+    /* background: url('https://img.freepik.com/premium-photo/abstract-gold-bokeh-with-black-background_34836-3152.jpg?w=740'); */
+    height: auto;
+    width: auto;
+  }
+
 
   .mainImage {
     height: 60vh;

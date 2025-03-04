@@ -13,6 +13,12 @@ export class AdminComponent {
 
   constructor(private router: Router){}
 
+  ngOnInit(){
+    if(!localStorage.getItem('tokenDance')){
+      this.router.navigateByUrl('/login')
+    }
+  }
+
   routee(location:any){
     this.router.navigateByUrl(`adminData/${location}`)
   }

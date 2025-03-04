@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   title = 'dance';
   welcome = true
 
-  message = "Hi, Can i get more info on wedDance?"
+  message = "Hello Weddance, I’m looking for Wedding Choreographer for our Wedding!"
 
   openWhatsApp() {
     const whatsappUrl = `https://wa.me/919911587963/?text=${encodeURIComponent(this.message)}`;

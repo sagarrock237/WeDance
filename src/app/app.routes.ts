@@ -11,6 +11,8 @@ import { AdminComponent } from './auth/admin/admin.component';
 import { AdminDataComponent } from './auth/admin-data/admin-data.component';
 import { Home2Component } from './home2/home2.component';
 import { ReviewComponent } from './components/review/review.component';
+import { PrivacyPolicyComponent } from './policy/privacy-policy/privacy-policy.component';
+import { TermsComponent } from './policy/terms/terms.component';
 
 export const routes: Routes = [
     {
@@ -34,20 +36,20 @@ export const routes: Routes = [
         component: ServicesComponent
     },
     {
-        path:'packages',
+        path: 'packages',
         component: PackagesComponent
     },
     {
-        path:'careers',
-        component:CareersComponent
+        path: 'careers',
+        component: CareersComponent
     },
     {
-        path:'login',
-        component:LoginComponent
+        path: 'login',
+        component: LoginComponent
     },
     {
-        path:'registerxyz',
-        component:RegisterComponent
+        path: 'registerxyz',
+        component: RegisterComponent
     },
     {
         path: 'admin',
@@ -60,5 +62,14 @@ export const routes: Routes = [
     {
         path: 'review',
         component: ReviewComponent
+    },
+    {
+        path: 'privacy',
+        component: PrivacyPolicyComponent
+    },
+    {
+        path: 'terms',
+        component: TermsComponent
     }
+
 ];
